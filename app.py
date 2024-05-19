@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,jsonify
 app = Flask(__name__)
 
 @app.route("/")
@@ -45,30 +45,16 @@ def result():
     return str(w)
 
 
-@app.route(“/success”)
 
-def getcandidate():
-    return jsonify(
-    {
-        "id": 1,
-        "name": “ayeni”,
-        "type": “devops Engr”
-    },
-    {
-        "id": 2,
-        "name": “bisi komolafe,
-        "type": “”infrastructure
-    },
-    {
-        "id": 3,
-        "name": “ojo” Taiwo,
-        "type": “aws Architect
-    },
-    {
-        "id": 4,
-        "name": “clement “philips,
-        "type": “system Engr”
-    },
+@app.route("/message")
+def message():
+    return "Welcome back from the holiday"
+    
+
+
+
+
+
 
 
     
